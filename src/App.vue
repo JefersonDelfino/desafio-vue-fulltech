@@ -12,7 +12,7 @@
       <v-container fill-height fluid>
         <v-layout row >
           <v-card width="100%" flat class="ma-4" >
-            <pessoa-view/>
+            <pessoa-data-table/>
           </v-card>
         </v-layout>
       </v-container>
@@ -21,13 +21,13 @@
 </template>
 
 <script>
-import PessoaView from './views/PessoaView.vue';
+import PessoaDataTable from './components/PessoaDataTable.vue';
 
 export default {
   name: 'App',
 
   components: {
-    PessoaView,
+    PessoaDataTable
   },
 
   data: () => ({

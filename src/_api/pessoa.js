@@ -14,7 +14,8 @@ export default {
   Post: function (data) {
     return new Promise((resolve, reject) => {
       var pessoas = getListaPessoas()
-      // Insira aqui o seu código: adicionar item na lista
+      
+      pessoas.push(data)
 
       setListaPessoas(pessoas)
       resolve(data)
@@ -23,7 +24,9 @@ export default {
   Put: function (id, data) {
     return new Promise((resolve, reject) => {
       var pessoas = getListaPessoas()
-      // Insira aqui o seu código: encontre o item na lista e o altere
+      
+      Object.assign(pessoas[id], data)
+
       setListaPessoas(pessoas)
       resolve(data)
     })
@@ -31,7 +34,8 @@ export default {
   Delete: function (id) {
     return new Promise((resolve, reject) => {
       var pessoas = getListaPessoas()
-      // Insira aqui o seu código: exclua o item da lista
+
+      pessoas.splice(id, 1)
 
       setListaPessoas(pessoas)
       resolve(id)
